@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .hero{
+            background-image: url(bg.jpg);
+            
+        }
+
+        header {
+            height: 200px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li img {
+            height: 100px;
+        }
+
+        nav ul li Button {
+            margin: 10px;
+            height: 30px;
+            width: 60px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        nav ul li button:hover{
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.534);
+        }
+
+        .right button {
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .main {
+            text-align: center;
+            margin-top: 200px;
+            color: white;
+        }
+
+        .main p {
+            padding-top: 30px;
+            line-height: 35px;
+            font-size: 1.30rem;
+        }
+
+        .main input {
+            width: 300px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 1.20rem;
+            padding-left: 10px;
+        }
+
+        .main button {
+            margin-left: 20px;
+            width: 130px;
+            height: 40px;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 5px;
+            font-size: 1.20rem;
+        }
+
+        .main button:hover{
+            color: rgba(0, 0, 0, 0.534);
+            cursor: pointer;
+        }
+
+        .page2 {
+            padding-top: 80px;
+            height: 450px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+        .page2 .left h1 {
+            margin-left: 15px;
+        }
+
+        .left {
+            font-size: 1.50rem;
+        }
+
+        .left p {
+            padding: 15px;
+            text-align: left;
+            line-height: 35px;
+            font-size: 1.50rem;
+        }
+
+        .right {
+            margin-bottom: 350px;
+            margin-right: 350px;
+        }
+
+        .right video {
+            position: absolute;
+        }
+
+        .right img {
+            position: absolute;
+            z-index: 1;
+        }
+
+        hr {
+            background-color: grey;
+            height: 5px;
+        }
+
+        .page3 {
+            padding-top: 40px;
+            height: 550px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: black;
+            color: white;
+            padding-left: 60px;
+        }
+
+        .right1 {
+            font-size: 1.30rem;
+        }
+
+        .right1 h1 {
+            padding-left: 15px;
+        }
+
+        .right1 p {
+            padding: 15px;
+            text-align: left;
+            line-height: 35px;
+            font-size: 1.50rem;
+        }
+
+        .page4 {
+            padding-top: 70px;
+            padding-left: 80px;
+            height: 550px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+        .left2 {
+            font-size: 1.30rem;
+        }
+
+        .left2 h1 {
+            padding-left: 15px;
+        }
+
+        .left2 p {
+            padding: 15px;
+            text-align: left;
+            line-height: 35px;
+            font-size: 1.50rem;
+        }
+
+        .right2 {
+            margin-bottom: 350px;
+            margin-right: 550px;
+        }
+
+        .right2 video {
+            position: absolute;
+            margin-left: 80px;
+            margin-top: 35px;
+        }
+
+        .right2 img {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .page4 {
+            padding-top: 70px;
+            height: 550px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+        .right3 {
+            font-size: 1.30rem;
+            padding-right: 70px;
+        }
+
+        .left3 img {
+            width: 550px;
+        }
+
+        .right3 h1 {
+            padding-left: 13px;
+        }
+
+        .right3 p {
+            padding: 15px;
+            text-align: left;
+            line-height: 35px;
+            font-size: 1.50rem;
+        }
+
+        .page5 {
+            padding-top: 70px;
+            height: 950px;
+            background-color: black;
+            color: white;
+        }
+
+        .page5 .head h1 {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .box {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .box input {
+            height: 50px;
+            width: 750px;
+            border: none;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.336);
+        }
+
+        .para {
+            text-align: center;
+        }
+
+        .para p {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 1.50rem;
+        }
+
+        .page5 ::placeholder {
+            font-size: 1.50rem;
+            color: white;
+        }
+
+        .para input {
+            width: 300px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 1.20rem;
+            padding-left: 10px;
+        }
+
+        .para button {
+            margin-left: 20px;
+            width: 130px;
+            height: 40px;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 5px;
+            font-size: 1.20rem;
+        }
+
+        .para button:hover{
+            color: rgba(0, 0, 0, 0.534);
+            cursor: pointer;
+        }
+
+        .para ::placeholder {
+            color: black;
+            font-size: 1.10rem;
+        }
+
+        .zero {
+            background-color: black;
+            color: white;
+            padding-top: 80px;
+            padding-left: 95px;
+        }
+
+        .zero a {
+            color: white;
+        }
+
+        .zero a:hover{
+            color: rgba(255, 255, 255, 0.397);
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: black;
+            color: rgba(255, 255, 255, 0.692);
+            height: 200px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .footer>div {
+            width: 10%;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.692);
+        }
+
+        .footer a:hover{
+            color: rgba(255, 255, 255, 0.397);
+            cursor: pointer;
+        }
+
+        .foot1,
+        .foot2,
+        p {
+            line-height: 30px;
+        }
+
+        .five {
+            background-color: black;
+            color: white;
+            padding-left: 95px;
+        }
+
+        .five button {
+            width: 80px;
+            height: 30px;
+            border: 1px solid white;
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .five button:hover{
+            color: rgba(255, 255, 255, 0.397);
+            cursor: pointer;
+        }
+
+        .five P{
+            font-size: 13px;
+            padding-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <header>
+            <nav>
+                <div class="left0">
+                    <ul>
+                        <li><img src="Netflix-logo.png" width="150px"></a></li>
+                    </ul>
+                </div>
+                <div class="right0">
+                    <ul>
+                        <li><button>English</button></li>
+                        <li><button>Sign In</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="main">
+            <h1>Unlimited movies, TV shows and more</h1>
+            <p>Watch anywhere. Cancel anytime. <br>
+                Ready to watch? Enter your email to create or restart your membership.</p><br>
+
+            <input type="text" placeholder="Email Address"><button>Get Started ></button><br><br><br><br>
+        </div>
+    </div>
+    <hr>
+
+    <div class="page2">
+        <div class="left">
+            <h1>Enjoy on your TV</h1>
+            <p>Watch on smart TVs, PlayStation, Xbox, <br> Chromecast, Apple TV, Blu-ray players <br> and more.</p>
+        </div>
+        <div class="right">
+            <div id="img1"><img src="tv.png" width="400px"><video src="video-tv-in-0819.m4v" autoplay loop width="400px"></video></div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="page3">
+        <div class="left1">
+            <img src="mobile.jpg" width="500px">
+        </div>
+        <div class="right1">
+            <h1>Download your <br> shows to <br> watch offline</h1>
+            <p>Save your favourites easily and always have <br> something to watch.</p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="page4">
+        <div class="left2">
+            <h1>Watch everywhere</h1>
+            <p>Stream unlimited movies and TV shows on your <br> phone, tablet, laptop, and TV.</p>
+        </div>
+        <div class="right2">
+            <div class="image"><img src="device logo.png" width="500px"><video src="video-devices-in.m4v" autoplay loop width="320px" ></video></div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="page4">
+        <div class="left3">
+            <img src="children.png">
+        </div>
+        <div class="right3">
+            <h1>Create profiles for <br> kids</h1>
+            <p>Send children on adventures with their <br> favourite characters in a space made just for <br>them—free
+                with your membership.</p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="page5">
+        <div class="head">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+        <div class="box">
+            <input type="text" placeholder="What is netflix?"><br><br>
+            <input type="text" placeholder="How much does netflix cost ?"><br><br>
+            <input type="text" placeholder="Where can i watch ?"><br><br>
+            <input type="text" placeholder="How do i cancel ?"><br><br>
+            <input type="text" placeholder="What can i watch on netflix ?"><br><br>
+            <input type="text" placeholder="Is netflix good for kids ?"><br><br>
+        </div>
+        <div class="para">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p><br>
+            <input type="text" placeholder="Email Address"><button>Get Started ></button>
+        </div>
+    </div>
+    <hr>
+
+    <div class="zero">
+        <p>Questions? Call <a href="#">000-800-919-1694</a></p>
+    </div>
+
+    <div class="footer">
+        <div class="foot1">
+            <p><a href="#">FAQ</a></p>
+            <p><a href="#">Help centre</a></p>
+            <p><a href="#">Cookies</a></p>
+            <p><a href="#">Informations</a></p>
+           
+        </div>
+        <div class="foot2">
+            <p><a href="#">Account</a></p>
+            <p><a href="#">Account</a></p>
+            <p><a href="#">Media centre</a></p>
+            <p><a href="#">Terms to use</a></p>
+        </div>
+        <div class="foot3">
+            <p><a href="#">Privacy</a></p>
+            <p><a href="#">Speed test</a></p>
+            <p><a href="#">Legal notices</a></p>
+            <p><a href="#">Only on netflix</a></p>
+        </div>
+        <div class="foot4">
+            <p><a href="#">Jobs</a></p>
+            <p><a href="#">Way to watch</a></p>
+            <p><a href="#">Contact us</a></p>
+            <p><a href="#">Investor Relations</a></p>
+        </div>
+    </div>
+    <div class="five">
+        <button>English</button><br>
+        <p>Netflix india</p>
+    </div>
+</body>
+
+</html>
